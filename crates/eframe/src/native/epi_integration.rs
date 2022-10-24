@@ -143,12 +143,17 @@ pub fn handle_app_output(
         window_size,
         window_title,
         decorated,
+        hittest,
         fullscreen,
         drag_window,
         window_pos,
         visible,
         always_on_top,
     } = app_output;
+
+    if let Some(hittest) = hittest {
+        let _ = window.set_cursor_hittest(hittest);
+    }
 
     if let Some(decorated) = decorated {
         window.set_decorations(decorated);

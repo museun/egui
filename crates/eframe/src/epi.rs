@@ -705,6 +705,12 @@ impl Frame {
         self.output.decorated = Some(decorated);
     }
 
+    /// Set whether to show allow event hit testing.
+    #[cfg(not(target_arch = "wasm32"))]
+    pub fn set_hittest(&mut self, hittest: bool) {
+        self.output.hittest = Some(hittest);
+    }
+
     /// Turn borderless fullscreen on/off (native only).
     #[cfg(not(target_arch = "wasm32"))]
     pub fn set_fullscreen(&mut self, fullscreen: bool) {
@@ -965,5 +971,9 @@ pub(crate) mod backend {
         /// Set to some bool to tell the window always on top.
         #[cfg(not(target_arch = "wasm32"))]
         pub always_on_top: Option<bool>,
+
+        /// Set to some bool to tell the whether input should perform a hittest.
+        #[cfg(not(target_arch = "wasm32"))]
+        pub hittest: Option<bool>,
     }
 }
