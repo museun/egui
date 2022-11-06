@@ -769,6 +769,19 @@ fn translate_virtual_key_code(key: winit::event::VirtualKeyCode) -> Option<egui:
         VirtualKeyCode::F19 => Key::F19,
         VirtualKeyCode::F20 => Key::F20,
 
+        // extended keys
+        VirtualKeyCode::Backslash => Key::Backslash,
+        VirtualKeyCode::Colon => Key::Colon,
+        VirtualKeyCode::Comma => Key::Comma,
+        VirtualKeyCode::Equals => Key::Equals,
+        VirtualKeyCode::Grave => Key::Grave,
+        VirtualKeyCode::LBracket => Key::LBracket,
+        VirtualKeyCode::Minus => Key::Minus,
+        VirtualKeyCode::Period => Key::Period,
+        VirtualKeyCode::RBracket => Key::RBracket,
+        VirtualKeyCode::Semicolon => Key::Semicolon,
+        VirtualKeyCode::Slash => Key::Slash,
+
         _ => {
             return None;
         }

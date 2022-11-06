@@ -561,6 +561,19 @@ pub enum Key {
     F18,
     F19,
     F20,
+
+    // Other keys
+    Backslash,
+    Colon,
+    Comma,
+    Equals,
+    Grave,
+    LBracket,
+    Minus,
+    Period,
+    RBracket,
+    Semicolon,
+    Slash,
 }
 
 impl RawInput {
