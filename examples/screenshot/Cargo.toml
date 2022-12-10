@@ -11,4 +11,4 @@ publish = false
 [dependencies]
 eframe = { path = "../../crates/eframe" }
 egui_extras = { path = "../../crates/egui_extras", features = ["image"] }
-itertools = "0.10.3"
+itertools = "0.10.5"

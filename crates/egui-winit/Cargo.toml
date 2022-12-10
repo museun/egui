@@ -48,7 +48,7 @@ egui = { version = "0.19.0", path = "../egui", default-features = false, feature
 ] }
 instant = { version = "0.1", features = ["wasm-bindgen"] } # We use instant so we can (maybe) compile for web
 tracing = { version = "0.1", default-features = false, features = ["std"] }
-winit = { version = "0.27.2", default-features = false }
+winit = { version = "0.27.5", default-features = false }
 
 #! ### Optional dependencies
 
@@ -64,7 +64,7 @@ tts = { version = "0.20", optional = true } # Can't use 0.21-0.24 due to compila
 webbrowser = { version = "0.8", optional = true }
 
 [target.'cfg(any(target_os="linux", target_os="dragonfly", target_os="freebsd", target_os="netbsd", target_os="openbsd"))'.dependencies]
-smithay-clipboard = { version = "0.6.3", optional = true }
+smithay-clipboard = { version = "0.6.6", optional = true }
 
 [target.'cfg(not(target_os = "android"))'.dependencies]
-arboard = { version = "3.0", optional = true, default-features = false }
+arboard = { version = "3.2", optional = true, default-features = false }
