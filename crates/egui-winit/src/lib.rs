@@ -817,6 +817,25 @@ fn translate_virtual_key_code(key: winit::event::VirtualKeyCode) -> Option<egui:
         VirtualKeyCode::F19 => Key::F19,
         VirtualKeyCode::F20 => Key::F20,
 
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Backslash => Key::Backslash,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Colon => Key::Colon,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Comma => Key::Comma,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Grave => Key::Grave,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::LBracket => Key::LBracket,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Period => Key::Period,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::RBracket => Key::RBracket,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Semicolon => Key::Semicolon,
+        #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+        VirtualKeyCode::Slash => Key::Slash,
+
         _ => {
             return None;
         }

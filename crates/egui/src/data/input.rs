@@ -669,6 +669,27 @@ pub enum Key {
     F18,
     F19,
     F20,
+
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Backslash,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Colon,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Comma,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Equals,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Grave,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    LBracket,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Period,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    RBracket,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Semicolon,
+    #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+    Slash,
 }
 
 impl Key {
@@ -764,6 +785,27 @@ impl Key {
             Key::F18 => "F18",
             Key::F19 => "F19",
             Key::F20 => "F20",
+
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Backslash => "Backslash",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Colon => "Colon",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Comma => "Comma",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Equals => "Equals",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Grave => "Grave",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::LBracket => "LBracket",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Period => "Period",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::RBracket => "RBracket",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Semicolon => "Semicolon",
+            #[cfg(all(target_os = "windows", target_vendor = "pc"))]
+            Key::Slash => "Slash",
         }
     }
 }
